@@ -7,7 +7,7 @@ set(SCAPIX_ROOT ${PROJECT_ROOT}/scapix CACHE STRING "scapix lib path")
 get_filename_component(SCAPIX_ROOT ${SCAPIX_ROOT} ABSOLUTE)
 
 if("$ENV{HUNTER_ROOT}" STREQUAL "")
-    set(HUNTER_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/Builds/.hunter")
+    set(HUNTER_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/cmake_build/.hunter")
 endif()
 
 include("${SCAPIX_ROOT}/project/cmake/modules/HunterGate.cmake")
