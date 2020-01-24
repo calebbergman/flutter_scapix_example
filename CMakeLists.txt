@@ -20,14 +20,14 @@ HunterGate(
 project(ScapixTut VERSION 1.0)
 
 add_library(
-  person
+  personlib
   SHARED
   ./native_libs/person/person.hpp
   ./native_libs/person/person.cpp
 )
 
 set_target_properties(
-  person
+  personlib
   PROPERTIES
   CXX_STANDARD 17
   CXX_STANDARD_REQUIRED ON
@@ -35,16 +35,16 @@ set_target_properties(
 )
 
 target_include_directories(
-  person
+  personlib
   PRIVATE
   ./native_libs/person
 )
 
-target_link_libraries(person)
+target_link_libraries(personlib)
 
 include(./scapix/project/cmake/modules/scapix.cmake)
 scapix_bridge_headers(
-  person
-  "com.example.flutter_example"
+  personlib
+  "com.example.person"
   "${CMAKE_CURRENT_SOURCE_DIR}/native_libs/person/person.hpp"
 )

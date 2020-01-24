@@ -3,7 +3,7 @@
 
 using namespace std;
 
-namespace flutter_example {
+namespace person {
 
   Person::Person(string name) {
     this->name = name;

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-namespace flutter_example {
+namespace person {
 
   class Person : public scapix::bridge::object<Person>
   {

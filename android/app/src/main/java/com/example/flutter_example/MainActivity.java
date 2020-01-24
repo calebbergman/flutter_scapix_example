@@ -6,7 +6,7 @@ import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 
-import com.example.flutter_example.Person;
+import com.example.person.Person;
 
 public class MainActivity extends FlutterActivity {
   private static final String CHANNEL = "com.example.flutter_example/person";
