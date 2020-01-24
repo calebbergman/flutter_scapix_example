@@ -22,8 +22,8 @@ project(ScapixTut VERSION 1.0)
 add_library(
   person
   SHARED
-  ./native_libs/person.hpp
-  ./native_libs/person.cpp
+  ./native_libs/person/person.hpp
+  ./native_libs/person/person.cpp
 )
 
 set_target_properties(
@@ -37,7 +37,7 @@ set_target_properties(
 target_include_directories(
   person
   PRIVATE
-  ./native_libs
+  ./native_libs/person
 )
 
 target_link_libraries(person)
@@ -46,5 +46,5 @@ include(./scapix/project/cmake/modules/scapix.cmake)
 scapix_bridge_headers(
   person
   "com.example.flutter_example"
-  "${CMAKE_CURRENT_SOURCE_DIR}/native_libs/person.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/native_libs/person/person.hpp"
 )
