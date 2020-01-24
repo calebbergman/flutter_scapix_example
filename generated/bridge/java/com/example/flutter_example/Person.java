@@ -11,5 +11,5 @@ public class Person extends com.scapix.Bridge
 
 	private native void _init(java.lang.String name);
 	protected Person(Nop nop) { super(nop); }
-	static { System.loadLibrary("flutter_examplelib"); }
+	static { System.loadLibrary("person"); }
 }
