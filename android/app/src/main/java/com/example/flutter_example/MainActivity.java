@@ -17,9 +17,9 @@ public class MainActivity extends FlutterActivity {
     new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL)
         .setMethodCallHandler((call, result) -> {
           if (call.method.equals("getPerson")) {
-            Person p = new Person("Mr Foo Bar");
+            Person p = new Person("Mr Foo Bar", 30);
             if (p != null)
-              result.success(p.SpeakName());
+              result.success(p.SpeakName() + ", age " + p.SpeakAge());
             else
               result.error("NOBUENO", "Couldn't make a person =(", null);
           } else {

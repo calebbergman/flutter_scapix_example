@@ -8,9 +8,12 @@ namespace person {
   {
     private:
       string name;
+      int32_t age;
     public:
-      Person(string name);
+      // Person(string name);
+      Person(string name, int32_t age);
       string SpeakName();
+      int32_t SpeakAge();
   };
 
 }
